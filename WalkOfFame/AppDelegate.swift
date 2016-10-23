@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  WalkOfFame
+//  throwAway
 //
-//  Created by Jason Gresh on 10/18/16.
+//  Created by C4Q on 10/18/16.
 //  Copyright © 2016 C4Q. All rights reserved.
 //
 
