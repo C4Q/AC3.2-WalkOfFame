@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1EE6D1521DB6818C006EBDBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6D1511DB6818C006EBDBF /* AppDelegate.swift */; };
-		1EE6D1541DB6818C006EBDBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6D1531DB6818C006EBDBF /* ViewController.swift */; };
 		1EE6D1571DB6818C006EBDBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE6D1551DB6818C006EBDBF /* Main.storyboard */; };
 		1EE6D1591DB6818C006EBDBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE6D1581DB6818C006EBDBF /* Assets.xcassets */; };
 		1EE6D15C1DB6818C006EBDBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE6D15A1DB6818C006EBDBF /* LaunchScreen.storyboard */; };
 		1EE6D1641DB681E4006EBDBF /* WOFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6D1631DB681E4006EBDBF /* WOFTableViewController.swift */; };
 		1EE6D1661DB68228006EBDBF /* walk_of_fame.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE6D1651DB68228006EBDBF /* walk_of_fame.json */; };
 		1EE6D1681DB68436006EBDBF /* Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6D1671DB68436006EBDBF /* Walk.swift */; };
+		A70237771DBC6A9F00FFDF0A /* WOFDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70237761DBC6A9E00FFDF0A /* WOFDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EE6D14E1DB6818C006EBDBF /* WalkOfFame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkOfFame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE6D1511DB6818C006EBDBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1EE6D1531DB6818C006EBDBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EE6D1561DB6818C006EBDBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EE6D1581DB6818C006EBDBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EE6D15B1DB6818C006EBDBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		1EE6D1631DB681E4006EBDBF /* WOFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WOFTableViewController.swift; sourceTree = "<group>"; };
 		1EE6D1651DB68228006EBDBF /* walk_of_fame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = walk_of_fame.json; sourceTree = "<group>"; };
 		1EE6D1671DB68436006EBDBF /* Walk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Walk.swift; sourceTree = "<group>"; };
+		A70237761DBC6A9E00FFDF0A /* WOFDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WOFDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				1EE6D1511DB6818C006EBDBF /* AppDelegate.swift */,
-				1EE6D1531DB6818C006EBDBF /* ViewController.swift */,
-				1EE6D1551DB6818C006EBDBF /* Main.storyboard */,
+				1EE6D1671DB68436006EBDBF /* Walk.swift */,
 				1EE6D1631DB681E4006EBDBF /* WOFTableViewController.swift */,
+				A70237761DBC6A9E00FFDF0A /* WOFDetailViewController.swift */,
+				1EE6D1551DB6818C006EBDBF /* Main.storyboard */,
 				1EE6D1651DB68228006EBDBF /* walk_of_fame.json */,
 				1EE6D1581DB6818C006EBDBF /* Assets.xcassets */,
 				1EE6D15A1DB6818C006EBDBF /* LaunchScreen.storyboard */,
 				1EE6D15D1DB6818C006EBDBF /* Info.plist */,
-				1EE6D1671DB68436006EBDBF /* Walk.swift */,
 			);
 			path = WalkOfFame;
 			sourceTree = "<group>";
@@ -147,8 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE6D1681DB68436006EBDBF /* Walk.swift in Sources */,
-				1EE6D1541DB6818C006EBDBF /* ViewController.swift in Sources */,
 				1EE6D1521DB6818C006EBDBF /* AppDelegate.swift in Sources */,
+				A70237771DBC6A9F00FFDF0A /* WOFDetailViewController.swift in Sources */,
 				1EE6D1641DB681E4006EBDBF /* WOFTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +311,7 @@
 				1EE6D1621DB6818C006EBDBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
