@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Designers-->
         <scene sceneID="S33-cY-pgI">
             <objects>
                 <tableViewController id="tVz-5h-Acv" customClass="WOFTableViewController" customModule="WalkOfFame" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,13 +15,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cqS-SP-408">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WOFCellIdentifier" textLabel="y3M-Kq-btX" style="IBUITableViewCellStyleDefault" id="cqS-SP-408" customClass="WOFCellIdentifier">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cqS-SP-408" id="jy5-ka-2DJ">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y3M-Kq-btX">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,11 +39,73 @@
                             <outlet property="delegate" destination="tVz-5h-Acv" id="zXa-lg-8hn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="WYJ-13-cjM"/>
+                    <navigationItem key="navigationItem" title="Designers" id="WYJ-13-cjM"/>
+                    <connections>
+                        <segue destination="8d0-wk-OhT" kind="show" identifier="WOFIdentifier" id="MI7-CU-rZO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ps7-Zz-YuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1463" y="-81"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fBs-le-1Uh">
+            <objects>
+                <viewController id="8d0-wk-OhT" customClass="WOFViewController" customModule="WalkOfFame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="icY-ak-LkU"/>
+                        <viewControllerLayoutGuide type="bottom" id="FtR-TL-Wp6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lev-E8-ffh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reL-fC-pm6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="tZ1-75-bpS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-F0-M5I">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="esd-qd-Hnd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-vI-TwK">
+                                <frame key="frameInset" minX="37" minY="197" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Tgo-oN-ggG"/>
+                                    <constraint firstAttribute="height" constant="300" id="zET-iA-dIs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="reL-fC-pm6" firstAttribute="centerX" secondItem="lev-E8-ffh" secondAttribute="centerX" id="Afa-9r-H22"/>
+                            <constraint firstItem="oBE-F0-M5I" firstAttribute="top" secondItem="icY-ak-LkU" secondAttribute="bottom" constant="10" id="GVr-lN-5kK"/>
+                            <constraint firstItem="PyK-vI-TwK" firstAttribute="centerX" secondItem="lev-E8-ffh" secondAttribute="centerX" id="Xi5-na-CcF"/>
+                            <constraint firstItem="PyK-vI-TwK" firstAttribute="top" secondItem="reL-fC-pm6" secondAttribute="bottom" constant="10" id="YpQ-Jd-wkb"/>
+                            <constraint firstItem="reL-fC-pm6" firstAttribute="top" secondItem="oBE-F0-M5I" secondAttribute="bottom" constant="10" id="a9B-AM-Lzw"/>
+                            <constraint firstItem="oBE-F0-M5I" firstAttribute="centerX" secondItem="lev-E8-ffh" secondAttribute="centerX" id="p4u-N5-Kpg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="PyK-vI-TwK" id="T7X-7I-MM9"/>
+                        <outlet property="designerLabel" destination="oBE-F0-M5I" id="sZn-6b-BJf"/>
+                        <outlet property="locationLabel" destination="reL-fC-pm6" id="By9-zP-fJv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTk-cA-GzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="-81.409295352323838"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fsq-8d-IUv">
