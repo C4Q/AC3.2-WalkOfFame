@@ -15,6 +15,7 @@
 		1EE6D1641DB681E4006EBDBF /* WOFTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6D1631DB681E4006EBDBF /* WOFTableViewController.swift */; };
 		1EE6D1661DB68228006EBDBF /* walk_of_fame.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE6D1651DB68228006EBDBF /* walk_of_fame.json */; };
 		1EE6D1681DB68436006EBDBF /* Walk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6D1671DB68436006EBDBF /* Walk.swift */; };
+		9E89DF541DBEE09800FBC93B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E89DF531DBEE09800FBC93B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1EE6D1631DB681E4006EBDBF /* WOFTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WOFTableViewController.swift; sourceTree = "<group>"; };
 		1EE6D1651DB68228006EBDBF /* walk_of_fame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = walk_of_fame.json; sourceTree = "<group>"; };
 		1EE6D1671DB68436006EBDBF /* Walk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Walk.swift; sourceTree = "<group>"; };
+		9E89DF531DBEE09800FBC93B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1EE6D15A1DB6818C006EBDBF /* LaunchScreen.storyboard */,
 				1EE6D15D1DB6818C006EBDBF /* Info.plist */,
 				1EE6D1671DB68436006EBDBF /* Walk.swift */,
+				9E89DF531DBEE09800FBC93B /* DetailViewController.swift */,
 			);
 			path = WalkOfFame;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				1EE6D1681DB68436006EBDBF /* Walk.swift in Sources */,
 				1EE6D1541DB6818C006EBDBF /* ViewController.swift in Sources */,
+				9E89DF541DBEE09800FBC93B /* DetailViewController.swift in Sources */,
 				1EE6D1521DB6818C006EBDBF /* AppDelegate.swift in Sources */,
 				1EE6D1641DB681E4006EBDBF /* WOFTableViewController.swift in Sources */,
 			);
@@ -311,6 +315,7 @@
 				1EE6D1621DB6818C006EBDBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
