@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fOM-a6-nz6" kind="show" identifier="detailSegue" id="b4r-l7-uuP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,6 +54,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ps7-Zz-YuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1463" y="-81"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="d2D-iB-poZ">
+            <objects>
+                <viewController id="fOM-a6-nz6" customClass="DetailViewController" customModule="WalkOfFame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Pf-NJ-nmM"/>
+                        <viewControllerLayoutGuide type="bottom" id="GOf-v8-KD3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EZh-6t-apE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIr-KK-eOq">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDJ-L7-6Hr">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQD-za-otp" userLabel="Info Label">
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VQD-za-otp" firstAttribute="leading" secondItem="EZh-6t-apE" secondAttribute="leadingMargin" id="79m-M5-ck3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tIr-KK-eOq" secondAttribute="trailing" id="G37-9T-jiu"/>
+                            <constraint firstItem="nDJ-L7-6Hr" firstAttribute="trailing" secondItem="EZh-6t-apE" secondAttribute="trailingMargin" id="Lqs-hO-Rke"/>
+                            <constraint firstItem="tIr-KK-eOq" firstAttribute="leading" secondItem="EZh-6t-apE" secondAttribute="leadingMargin" id="ZA2-4T-cpG"/>
+                            <constraint firstItem="VQD-za-otp" firstAttribute="trailing" secondItem="EZh-6t-apE" secondAttribute="trailingMargin" id="Zhw-OD-yu0"/>
+                            <constraint firstItem="tIr-KK-eOq" firstAttribute="top" secondItem="8Pf-NJ-nmM" secondAttribute="bottom" constant="8" id="bsC-q2-PVr"/>
+                            <constraint firstItem="nDJ-L7-6Hr" firstAttribute="top" secondItem="tIr-KK-eOq" secondAttribute="bottom" id="kW8-KZ-dx2"/>
+                            <constraint firstItem="VQD-za-otp" firstAttribute="top" secondItem="nDJ-L7-6Hr" secondAttribute="bottom" constant="50" id="mKn-Ob-PUr"/>
+                            <constraint firstItem="nDJ-L7-6Hr" firstAttribute="leading" secondItem="EZh-6t-apE" secondAttribute="leadingMargin" id="wFO-Z8-U5D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="nDJ-L7-6Hr" id="KXY-m4-Wo7"/>
+                        <outlet property="infoLabel" destination="VQD-za-otp" id="DMu-ub-Jo7"/>
+                        <outlet property="nameLabel" destination="tIr-KK-eOq" id="H6t-mN-424"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCZ-dg-bM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="-81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fsq-8d-IUv">

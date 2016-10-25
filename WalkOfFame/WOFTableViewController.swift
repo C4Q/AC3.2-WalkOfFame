@@ -12,6 +12,7 @@ class WOFTableViewController: UITableViewController {
 	var walks = [Walk]()
 	internal let walkJSONFileName: String = "walk_of_fame.json"
 	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		if let resourceURL = getResourceURL(from: "walk_of_fame", withExt: "json"),
@@ -37,13 +38,14 @@ class WOFTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "reuseID", for: indexPath)
 		
-		let currentDesigner = walks[indexPath.row]
+		let sorted = walks.sorted { $0.designer < $1.designer }
+		
+		let currentDesigner = sorted[indexPath.row]
 		cell.textLabel?.text = currentDesigner.designer
 		cell.detailTextLabel?.text = currentDesigner.location
 		
 		return cell
 	}
-	
 	
 	internal func getResourceURL(from fileName: String, withExt ext: String) -> URL? {
 		let fileURL: URL? = Bundle.main.url(forResource: fileName, withExtension: ext)
@@ -81,14 +83,21 @@ class WOFTableViewController: UITableViewController {
 		return walks
 	}
 	
-	/*
 	// MARK: - Navigation
 	
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	// Get the new view controller using segue.destinationViewController.
-	// Pass the selected object to the new view controller.
+		let sorted = walks.sorted { $0.designer < $1.designer }
+		
+		if let tappedWalksCell: UITableViewCell = sender as? UITableViewCell {
+			if segue.identifier == "detailSegue" {
+				let detailViewController: DetailViewController = segue.destination as! DetailViewController
+				
+				let cellIndexPath: IndexPath = self.tableView.indexPath(for: tappedWalksCell)!
+				
+				// Pass the selected object to the new view controller.
+				detailViewController.selectedWalk = sorted[cellIndexPath.row]
+			}
+		}
 	}
-	*/
-	
 }
